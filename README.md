@@ -1,0 +1,1 @@
+# gando-partner-php-examples
