@@ -1,0 +1,5 @@
+# Bundled GandoWebhookController (same as GandoPartnerBundle auto-import; explicit for MicroKernel apps).
+gando_partner_webhook:
+    path: /webhooks/gando
+    controller: gando.partner.webhook_controller
+    methods: [POST]

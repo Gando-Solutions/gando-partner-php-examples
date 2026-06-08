@@ -1,0 +1,12 @@
+/vendor/
+/.env
+/.env.local
+composer.lock
+.phpunit.cache/
+.idea/
+.vscode/
+
+# Sub-project dependencies
+/examples/02-webhook-receiver-symfony/vendor/
+/examples/02-webhook-receiver-symfony/var/
+/examples/02-webhook-receiver-symfony/.env
