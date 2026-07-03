@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * Create a deposit for a linked rental operator (Partner API).
  *
- * Usage: php examples/01-create-deposit.php
+ * Usage: php examples/03-create-deposit.php
  */
 
 require __DIR__.'/_bootstrap.php';

@@ -6,11 +6,15 @@ Runnable examples for the [Gando Partner PHP SDK](https://github.com/Gando-Solut
 
 ## Quickstart
 
+Follow the [integration recipes](https://github.com/Gando-Solutions/gando-partner-php/tree/main/recipes) in order:
+
 ```bash
 composer install
 cp .env.example .env
 # Edit .env with your staging partner credentials
-php examples/01-create-deposit.php
+
+php examples/01-connect-flow.php          # 1. Partner Connect signed URL
+php examples/03-create-deposit.php          # 3. Create a deposit (after link + webhooks)
 ```
 
 If `gando/partner` is not on Packagist yet, add a VCS repository before `composer install`:
@@ -56,7 +60,8 @@ Or call `GET /api/partner/accounts` with your partner key. Use the `account_id` 
 
 | Example | Command | Purpose |
 | --- | --- | --- |
-| Create deposit | `php examples/01-create-deposit.php` | Create a deposit with inline redirect |
+| Partner Connect | `php examples/01-connect-flow.php` | Build signed `/register` URL; `--check` lists linked accounts |
+| Create deposit | `php examples/03-create-deposit.php` | Create a deposit with inline redirect |
 | Webhook (plain PHP) | `php examples/02-webhook-receiver-plain.php` | CLI signature self-test; or HTTP server below |
 | Webhook (Symfony) | See [examples/02-webhook-receiver-symfony/README.md](examples/02-webhook-receiver-symfony/README.md) | Bundle controller + event subscribers |
 | Handle rejection | `php examples/03-handle-rejection.php` | Return URL + webhook rejection handling |
